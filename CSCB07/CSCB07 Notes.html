@@ -1,0 +1,1107 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>CSCB07 Notes</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="b1d45c5a-566b-4242-9918-39dbc013dc36" class="page serif"><header><img class="page-cover-image" src="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/soft-eng-bg.jpeg" style="object-position:center 34.63%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">💻</span></div><h1 class="page-title">CSCB07 Notes</h1><p class="page-description"></p></header><div class="page-body"><h1 id="3cf60b0e-0030-46d4-a4ea-f8545b2a85f7" class=""><mark class="highlight-blue"><span style="border-bottom:0.05em solid"><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Lec Notes</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></span></mark></h1><h3 id="0d38e782-629f-4952-a455-7c8d5acd9918" class=""><mark class="highlight-teal"><span style="border-bottom:0.05em solid"><strong>TOPIC: SDLC and Version Control</strong></span></mark></h3><h3 id="56ac812d-2d2f-4065-8649-1e5055a1a067" class=""><mark class="highlight-orange">Software Development Life Cycle:</mark></h3><ol type="1" id="e91228a3-a672-4d4c-ad8f-e4344f49b4cb" class="numbered-list" start="1"><li>identifying the problem (getting prompt/problem from client)</li></ol><ol type="1" id="a8667004-bd85-4306-a818-4d6417b29c7b" class="numbered-list" start="2"><li>planning development stage </li></ol><ol type="1" id="f73f9fae-67a0-4220-8371-ac8d95cfcbbf" class="numbered-list" start="3"><li>planning development stage (getting requirements from client; contact user w/ interviews)</li></ol><ol type="1" id="1694e346-575d-478c-8862-4a9365b49bbb" class="numbered-list" start="4"><li>design phase (this phase is where we design our software, what platform/languages to use, etc.)</li></ol><ol type="1" id="d46841e1-b429-4078-8b9c-e84e68a5945e" class="numbered-list" start="5"><li>implementation phase (translating design into code; ie. doing the actual coding/scripting/programming)</li></ol><ol type="1" id="991348d2-f153-409c-a06a-c13e97dd0074" class="numbered-list" start="6"><li>testing phase (testers in agile team will be doing the full testing: ways of testing include integrated testing, unit testing, etc.)</li></ol><ol type="1" id="5d75f647-45d6-4f82-9b46-9eec496f8c71" class="numbered-list" start="7"><li>maintenance phase (the maintenance phase is where the developers will be there to maintain the software providing version updates (both minor and major)</li></ol><h3 id="95131e1a-f6e0-46f1-8ee1-85a154046ead" class=""><mark class="highlight-orange">Agile Software Development:</mark></h3><ul id="290c0c0c-83a1-40f9-8da9-eb63a3b3f208" class="bulleted-list"><li style="list-style-type:disc">scrum (certain way of building software in iterations on the go)</li></ul><h3 id="7e224595-cfbf-44c2-aa72-cb6a60088a39" class=""><mark class="highlight-orange">Version Control:</mark></h3><ul id="6efb640d-45c8-49e7-82de-13647eec31f5" class="bulleted-list"><li style="list-style-type:disc">systems: svn and git (GitHub is web service based on git)</li></ul><ul id="040bc25a-9eeb-41b8-8b35-563cdeb31bbf" class="bulleted-list"><li style="list-style-type:disc">svn is centralized, git is distributed</li></ul><ul id="f92c5346-0659-4a46-8545-2e6099d6b917" class="bulleted-list"><li style="list-style-type:disc">repo (repository) is like a history of the project</li></ul><ul id="cd590436-feb8-42c6-a982-170d11ffcb35" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-pink"><strong>Centralized: </strong></mark><ul id="7d7253fd-c13c-487e-8a23-1ac4b962cb3a" class="bulleted-list"><li style="list-style-type:circle">given a v1, v2, and a delta, it stores the original version ie.v1 and the delta changes which saves a lot of memory. The following versions v2,v3, … can be accessed by retrieving the original version plus all the changes.</li></ul><ul id="a6d8cf29-4069-4a79-b17f-5478fdef1b65" class="bulleted-list"><li style="list-style-type:circle">checkout: getting a version of the project out of the repo to your local machine</li></ul><ul id="2dc21af9-0a31-43ff-b637-6b0c0f67342a" class="bulleted-list"><li style="list-style-type:circle">main disadvantage: single point of failure, if v1 deleted, then everything gone</li></ul><ul id="9f2caa51-d4b4-4802-82b7-3eab29b22423" class="bulleted-list"><li style="list-style-type:circle">storing deltas is computationally expensive</li></ul></li></ul><ul id="cf453533-6a5c-42cd-9cc7-2b47ffcaa5fb" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-pink"><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Distributed:</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></mark><ul id="9a18e5fa-7969-4258-af55-3d740be08bbc" class="bulleted-list"><li style="list-style-type:circle">each developer (local machine) has a copy of the repo (local repos)</li></ul><ul id="c8a1a1f6-c1d1-41ba-a83d-7542017a69e0" class="bulleted-list"><li style="list-style-type:circle">first get the original repo (clone)</li></ul><ul id="0468f5bd-70bb-498b-873f-021f1e4c07e6" class="bulleted-list"><li style="list-style-type:circle">essentially the centralized dynamic is done locally</li></ul><ul id="d1d84134-d440-4c30-a997-245ccf70d002" class="bulleted-list"><li style="list-style-type:circle">checking out and committing to the repo on their local machine</li></ul><ul id="02c9fc8a-f327-41cd-9586-6fd5acb7ffc1" class="bulleted-list"><li style="list-style-type:circle">then they would push their repo to the original (commonly shared) repo with their changes</li></ul><ul id="356f03f3-e1ff-4700-bab1-fff012f7cfb6" class="bulleted-list"><li style="list-style-type:circle">once someone else pushes their repo with changes, we can pull their changes from the original repo to our local repo</li></ul><ul id="33f43405-6bc4-46e1-9c0a-35fc6dd8d180" class="bulleted-list"><li style="list-style-type:circle">how git works: if we have three files and only file 3 is changed then we store the new file 3 with the changes and links to the other two unchanged files.</li></ul></li></ul><hr id="509989dd-400b-4712-aabd-969f9c236036"/><h3 id="98921af4-f001-4319-a3e1-2da19ca9623a" class=""><mark class="highlight-teal"><span style="border-bottom:0.05em solid"><strong>TOPIC:  OOP</strong></span></mark></h3><h3 id="f7533b94-19c3-48dd-b3bb-70fba84d2b32" class=""><mark class="highlight-orange">Abstract Classes</mark></h3><p id="b458498d-8e80-4e4d-8c87-e6487849a2a4" class="">What are abstract classes:</p><ul id="81d81d81-37b3-4d7b-b89b-e179fa7cf3f3" class="bulleted-list"><li style="list-style-type:disc">an abstract class is a class that cannot be instantiated and serves as a blueprint for derived classes</li></ul><ul id="eebfb084-fa7c-4171-8925-61024100a0ba" class="bulleted-list"><li style="list-style-type:disc">it can contain both abstract and non-abstract methods</li></ul><ul id="907000eb-75d0-46cd-9a54-52b177066697" class="bulleted-list"><li style="list-style-type:disc">it can have instance variables and constructors</li></ul><ul id="5c2efbe2-47a6-4a33-aa7c-41e0b4d00783" class="bulleted-list"><li style="list-style-type:disc">it may provide default implementations for some or all of its methods</li></ul><ul id="c5d81185-7650-4832-9597-c5f75b2c772e" class="bulleted-list"><li style="list-style-type:disc">it can enforce or provide common behavior for its derived classes</li></ul><ul id="0bb66a67-73f0-42d9-ba07-79b1cfd7911a" class="bulleted-list"><li style="list-style-type:disc">a class can inherit from only one abstract class</li></ul><p id="1fffa9cd-a4b2-4ac5-874f-c4b8703b08e5" class="">What can it be used for:</p><ul id="f84076c2-b58a-4cdd-876c-5ea400277d9b" class="bulleted-list"><li style="list-style-type:disc">when you want to provide a common base implementation for a group of related classes</li></ul><ul id="92af2190-e55e-48d4-b3fc-b4aaf9fb039f" class="bulleted-list"><li style="list-style-type:disc">when you have some methods that can be fully implemented in the base class and other methods that should be implemented in the derived classes</li></ul><ul id="93d91e97-b826-4a51-921e-f054957b5958" class="bulleted-list"><li style="list-style-type:disc">when you want to define common state or behavior that derived classes can inherit</li></ul><h3 id="fc302427-f9f8-4917-92e1-123abee302a3" class=""><mark class="highlight-orange">Interface</mark></h3><p id="21caa836-5c15-4565-892b-8f80d9d74859" class="">What are interfaces:</p><ul id="905e4238-ef0a-4381-b29a-357ff8da4df6" class="bulleted-list"><li style="list-style-type:disc">an interface is a contract that defines a set of methods that a class must implement</li></ul><ul id="d0f2ed0d-6adb-4d8b-86f2-e93c06588402" class="bulleted-list"><li style="list-style-type:disc">it cannot have instance variables or constructors</li></ul><ul id="4a2e3acf-8a76-4377-a735-94e5e7f0e318" class="bulleted-list"><li style="list-style-type:disc">all methods in an interface are implicitly abstract and public</li></ul><ul id="75bf4fd2-b278-4090-b83c-6608c1988b67" class="bulleted-list"><li style="list-style-type:disc">it cannot provide default implementations for methods</li></ul><ul id="ed52797d-4c80-4d0c-a5af-db3d1b73e16a" class="bulleted-list"><li style="list-style-type:disc">a class can implement multiple interfaces</li></ul><p id="23b3c244-ad4e-4149-a374-f1e076f4134f" class="">What can it be used for:</p><ul id="3d31364b-eb57-4de2-89f0-ee68a6b10dfe" class="bulleted-list"><li style="list-style-type:disc">when you want to define a contract that specifies a set of behaviors that a class must implement.</li></ul><ul id="f1035c09-0126-499f-b266-819883d90d86" class="bulleted-list"><li style="list-style-type:disc">when you want to achieve multiple inheritances since a class can implement multiple interfaces<ul id="d150dd20-88bc-4c15-a78b-becf5e8811e6" class="bulleted-list"><li style="list-style-type:circle">when you want to provide a common behavior across unrelated classes</li></ul></li></ul><ul id="8e9463db-1e8f-4277-9569-fd589d6692c4" class="bulleted-list"><li style="list-style-type:disc">when you want to enable loose coupling by programming to interfaces rather than concrete classes</li></ul><hr id="9de06a98-ee64-4c83-bb58-aaeb3d266732"/><h3 id="5f9362f7-be9d-4ef0-86b7-943e274e3b58" class=""><mark class="highlight-teal"><span style="border-bottom:0.05em solid"><strong>TOPIC:  Solid Design</strong></span></mark></h3><p id="cce4b52c-de8b-4274-963b-ee2557e78989" class=""><mark class="highlight-red"><strong>Single Responsibility Principle</strong></mark></p><ul id="7d54aa4e-7e51-412e-91f3-00d3e2b6f244" class="bulleted-list"><li style="list-style-type:disc"><em><mark class="highlight-yellow">a class should have only one reason to change</mark></em></li></ul><ul id="1dd90cc5-3f1e-4d81-8785-51030cb2d923" class="bulleted-list"><li style="list-style-type:disc">The following is an example of violating the SRP:</li></ul><figure id="bfab5954-347e-45ef-a2a8-faaa019ae226" class="image"><a href="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/Screenshot_2023-06-19_at_10.40.01_AM.png"><img style="width:1208px" src="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/Screenshot_2023-06-19_at_10.40.01_AM.png"/></a><figcaption><strong>Example: </strong>handling graphics of rectangle is one responsibility, calculating geometry of rectangle is another responsibility; the designer put both together which violates SRP. Note: change to GUI can affect computing of rectangle because the code is stored in the same Rectangle Class.</figcaption></figure><ul id="67b5bcb2-c4d9-412d-8332-553badd3a216" class="bulleted-list"><li style="list-style-type:disc">The following is an example of conforming to the SRP:</li></ul><figure id="6d1b20a3-1c35-47b4-8472-c895bbedf4ff" class="image"><a href="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/Screenshot_2023-06-19_at_10.47.05_AM.png"><img style="width:1082px" src="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/Screenshot_2023-06-19_at_10.47.05_AM.png"/></a><figcaption>Here we see separate classes where computational geometry application takes care of the mechanical stuff, whereas graphical application will use both, computational app is not connected with GUI. Import IDEA: “coupling”.</figcaption></figure><p id="009f3a85-c2e8-4b83-9ddb-c248eca4f641" class=""><mark class="highlight-red"><strong>Open/Closed Principle</strong></mark></p><ul id="c8fdbb39-3c0f-4f53-979c-cd39167aa5ac" class="bulleted-list"><li style="list-style-type:disc">probably the most important principle of SOLID</li></ul><ul id="d5e5df95-fc86-4627-916c-8b4d0c9e0aa9" class="bulleted-list"><li style="list-style-type:disc">software entities (classes, modules, functions, etc.) should be<mark class="highlight-yellow"><em> open for extension, but closed for modification.</em></mark></li></ul><ul id="746a455e-00ce-4d86-8fa5-cd61b7fa9b61" class="bulleted-list"><li style="list-style-type:disc">avoid modifying existing classes b/c:<ul id="89467edf-ca45-45d3-9b0a-cdbee901b685" class="bulleted-list"><li style="list-style-type:circle"> <mark class="highlight-yellow">it may introduce more/new bug</mark></li></ul><ul id="8b548a81-c6f9-45d5-91e9-1024ad8b15fe" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-yellow">dependent classes can be affected</mark></li></ul></li></ul><ul id="6c89ecad-ecda-43a8-be8c-d18a698adad2" class="bulleted-list"><li style="list-style-type:disc">The following is an example of a violation of OCP</li></ul><figure id="4fe8e7dd-0cd2-40d1-a8be-df49fbab6ac1" class="image"><a href="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/Screenshot_2023-06-19_at_10.54.09_AM.png"><img style="width:1120px" src="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/Screenshot_2023-06-19_at_10.54.09_AM.png"/></a></figure><pre id="d3cd6a39-7543-4b82-b772-743d7ca1e2d0" class="code"><code>package geometry
+
+class Client{
+	AdditionServer server;
+	
+	public void foo(int a, int b) {
+		return server.compute(a,b);
+	}
+}
+
+class AdditionServer{
+	public void compute(int a, int b) {
+		return a+b;
+	}
+}
+
+public class OCPExample {
+	public static void main(String[] args) {
+		Client c = new Client(new ServerAdd));
+		c.foo(2,3);
+	}
+}</code></pre><ul id="0c8cf218-2cfc-496c-ac30-84b0d28b7c75" class="bulleted-list"><li style="list-style-type:disc">The following is an example of conforming to the OCP</li></ul><figure id="6131bfd0-f561-469e-b993-ab979b1beb49" class="image"><a href="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/Screenshot_2023-06-19_at_11.02.28_AM.png"><img style="width:1016px" src="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/Screenshot_2023-06-19_at_11.02.28_AM.png"/></a></figure><p id="87491eb5-cee3-43ae-825b-292879cb5fa4" class=""><mark class="highlight-red"><strong>Liskov Substitution Principle</strong></mark></p><ul id="88df8fb8-610f-4ef2-945f-667ebd7a2b66" class="bulleted-list"><li style="list-style-type:disc"><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em><em>subtypes must be substitutable for their base types</em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></em></li></ul><ul id="9c478ddd-3ff5-43e9-9dea-4da0044a8588" class="bulleted-list"><li style="list-style-type:disc">Intuitive definition: idea that if design conforms to LSP then any property that is valid for an object belonging to a supertype, this property should be true for a object belonging to a subtype.</li></ul><ul id="ebd10a80-77a9-4775-afb6-6da8b30ba9b9" class="bulleted-list"><li style="list-style-type:disc">The following example is a violation of LSP:<figure id="d04ecaa4-2d11-433b-8297-aaf2e2ae9fb8" class="image"><a href="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/Screenshot_2023-06-26_at_9.29.15_AM.png"><img style="width:1150px" src="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/Screenshot_2023-06-26_at_9.29.15_AM.png"/></a><figcaption>Here we see that when setWidth is ran, we have height AND width being 5, then both being 4 in following line. Hence, when we call the method computeArea() we have that area of the rectangle is calculated as a square with dimensions of 4x4. So, we have area of 16 which doesn’t equal to 20, thus we get a false.</figcaption></figure></li></ul><pre id="6392bb05-d31d-4d3e-8153-5729798d8f15" class="code"><code>class Rectangle {
+	double height;
+	double width;
+
+	public Rectangle(double height, double width) {
+		// ...
+	}
+
+	public void setWidth(double width) {
+		this.width = width;
+	}
+	//...other methods
+}
+
+class Square extends Rectangle {
+	public Square(double sideLength) {
+		super(sideLength, sideLength); 
+		// makes the original width and height value of sideLength
+	}
+
+	// make sure we don&#x27;t end with a square with dim. of (x,y) only (x,x)
+	@Override
+	public void setWidth(double width) {
+		this.width = width;
+		this.length = length;
+	}
+
+	// continue with same for length
+	@Override
+	public void setLength(double length) {
+		this.width = width;
+		this.length = length;
+	}
+}</code></pre><ul id="57d5b312-7295-4a58-b41f-42d84de21417" class="bulleted-list"><li style="list-style-type:disc">To fix the problem (example) from before we can have a superclass called Shape such that subclasses Rectangle and Square inherits the superclass.</li></ul><ul id="9aab57ea-0b6d-4063-9735-0316a03a6a5c" class="bulleted-list"><li style="list-style-type:disc">should not be making assumptions that clients/users will be be thinking the same way you are thinking</li></ul><p id="233a57da-fcd8-4e8a-a84e-f1d4f05565d6" class=""><mark class="highlight-red"><strong>Interface Segregation Principle</strong></mark></p><ul id="f9cf0dcd-7050-44c0-a617-ab9267aef80e" class="bulleted-list"><li style="list-style-type:disc"><em><em><em><em><em><em><em>clients should not be forced to depends on methods that they do not use.</em></em></em></em></em></em></em></li></ul><ul id="82124d93-2a9e-41a9-9f9f-8845abf3145d" class="bulleted-list"><li style="list-style-type:disc">somehow similar to SRP</li></ul><ul id="46ea79bd-3abb-4487-8b80-090fe41b1f03" class="bulleted-list"><li style="list-style-type:disc">interfaces should be coherent not cohesive</li></ul><ul id="fa240324-78b4-4372-b498-486166f9deb3" class="bulleted-list"><li style="list-style-type:disc">so, interfaces of the class can be broken up into groups of methods where each group serves a different set of clients.</li></ul><ul id="91cdca4f-4c86-49a9-bcf4-9ec8de057ab1" class="bulleted-list"><li style="list-style-type:disc">The following is an example of ISP violation:<figure id="33d0fce1-96af-484c-bdef-8727a36e1674" class="image"><a href="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/Screenshot_2023-06-26_at_9.49.07_AM.png"><img style="width:1116px" src="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/Screenshot_2023-06-26_at_9.49.07_AM.png"/></a></figure></li></ul><ul id="c2bf3739-abb1-4733-8637-d32b0bca8df8" class="bulleted-list"><li style="list-style-type:disc">The following is an example of conforming to ISP:<figure id="0b68abb7-16ee-4888-82d3-81f17b3b192c" class="image"><a href="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/Screenshot_2023-06-26_at_9.50.09_AM.png"><img style="width:1060px" src="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/Screenshot_2023-06-26_at_9.50.09_AM.png"/></a><figcaption>Here we want to split into three interfaces where each interface does its own part separately. So we see that for example Deposit Transaction will have a more coherent interface of Deposit UI, instead of having a cohesive interface of UI.</figcaption></figure></li></ul><ul id="6ab668ba-cc85-4aa5-9906-a8b996afee7a" class="bulleted-list"><li style="list-style-type:disc">NOTE: interfaces can inherit other interfaces (more than one is acceptable)</li></ul><p id="8a5dce15-f2f2-48a6-9384-c4671bbb77cd" class=""><mark class="highlight-red"><strong>Dependency Inversion Principle</strong></mark></p><ul id="28e235db-6558-4cb2-9581-6efabddb43b8" class="bulleted-list"><li style="list-style-type:disc">A. High-level modules should not depend on low-level modules. Both should depend on abstractions.</li></ul><ul id="7b8a86c0-99ac-478d-b1c4-6ebf62f90b25" class="bulleted-list"><li style="list-style-type:disc">B. Abstraction should not depend on details. Details should depend on abstraction.</li></ul><ul id="de255ea3-d552-43eb-9aff-dd962ccb583c" class="bulleted-list"><li style="list-style-type:disc">NOTE: high-level classes basically sets policies, whereas the low-level classes is like a tool for the high-level classes.</li></ul><ul id="67dd4a93-05c1-45e7-bbaa-7eb2af975617" class="bulleted-list"><li style="list-style-type:disc">The following is an example of violation of DIP:<figure id="198374f3-4c15-44ed-a9e2-e1a450c4d4a0" class="image"><a href="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/Screenshot_2023-06-26_at_9.55.46_AM.png"><img style="width:958px" src="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/Screenshot_2023-06-26_at_9.55.46_AM.png"/></a><figcaption>Here we see that Button is the high-level class and Lamp is the low-level class. So we are violating the DIP because Button depends on Lamp. So to fix this we want to have an interface of a button server.</figcaption></figure></li></ul><ul id="983562af-75ed-4eb8-9299-780b5d906c2e" class="bulleted-list"><li style="list-style-type:disc">The following is an example of conforming to the DIP:<figure id="158c4d03-9230-4385-89a3-6763750356cf" class="image"><a href="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/Screenshot_2023-06-26_at_10.00.04_AM.png"><img style="width:1092px" src="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/Screenshot_2023-06-26_at_10.00.04_AM.png"/></a><figcaption>No reference to lamp, only to ButtonServer. Then anything that implements this interface will be able to use Button as they can access it through ButtonServer.</figcaption></figure></li></ul><h3 id="0caab667-8dd8-40f0-9d49-c6328d134b58" class=""><mark class="highlight-teal">TOPIC: Design Smells</mark></h3><ul id="07e1f650-25b7-4415-b34f-7847be4224a2" class="bulleted-list"><li style="list-style-type:disc">symptoms of poor design</li></ul><ul id="a188a783-7834-4571-b27a-6eb2492f755d" class="bulleted-list"><li style="list-style-type:disc">often caused by violation of one or more SOLID Principles</li></ul><ul id="218b26c1-4eab-42b8-823b-8ec3d1510e08" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red">These symptoms include:</mark><ul id="e7c6caae-9250-4e09-9a98-63e66bc83103" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-yellow"><strong>Rigidity</strong></mark> - design is hard to change</li></ul><ul id="c6124714-eac8-4bb5-a5ee-156bc530253e" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-yellow"><strong>Fragility</strong></mark> - design is easy to break</li></ul><ul id="76da1012-25ec-4fcb-8ac4-e543c26ae76a" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-yellow"><strong>Immobility</strong></mark> - design is hard to reuse</li></ul><ul id="010871b9-9363-4a10-a351-27e6a3547e00" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-yellow"><strong>Viscosity</strong></mark> - is hard to do the right thing (if someone wants to follow your design and make changes based on that design, this would be more challenging than doing a hack)</li></ul><ul id="84b27e0b-ea7a-448c-8780-82f66b61e10f" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-yellow"><strong>Needless Complexity</strong></mark> - overdesign; making code too complex</li></ul><ul id="aa915c45-ce99-48e4-bcbf-a544087031ed" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-yellow"><strong>Needless Repetition</strong></mark> - mouse abuse (ie. too much copy and paste)</li></ul><ul id="1198a4ab-21cf-4f19-8cb7-c2ef4485342e" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-yellow"><strong><mark class="highlight-yellow"><strong><mark class="highlight-yellow"><strong><mark class="highlight-yellow"><strong><mark class="highlight-yellow"><strong><mark class="highlight-yellow"><strong><mark class="highlight-yellow"><strong>Opacity</strong></mark></strong></mark></strong></mark></strong></mark></strong></mark></strong></mark></strong></mark> - disorganized expression (when code becomes difficult to read and/or to understand)</li></ul><p id="4ca25750-a788-4327-94db-78e49ea1c0f3" class=""><strong>Note</strong>: refactoring can solve the design smell of opacity, documentation can also help</p></li></ul><h3 id="94f1944f-11c7-4988-860f-43e8b03c0825" class=""><mark class="highlight-teal">TOPIC: Design Patterns</mark></h3><ul id="b6aba8d7-b522-4539-ad58-f42e1e7f027d" class="bulleted-list"><li style="list-style-type:disc">design patterns are solutions, not exact but generic; they are more specific than SOLID</li></ul><ul id="2f612e59-36b4-4b24-9566-a19d8bc33698" class="bulleted-list"><li style="list-style-type:disc">23 design patterns divided into three categories:<ul id="d5f666c7-74fb-4b1d-9ec9-a2f54fba323f" class="bulleted-list"><li style="list-style-type:circle">Creational Patterns</li></ul><ul id="e1c58685-979f-4a7a-8be4-3a5c734d1b2a" class="bulleted-list"><li style="list-style-type:circle">Structural Patterns</li></ul><ul id="edd74e00-140d-4c72-9af2-2d6fb1c63d89" class="bulleted-list"><li style="list-style-type:circle">Behavioral Patterns</li></ul></li></ul><p id="bf9248ce-9c32-4f92-ace6-814a51e325ce" class=""><strong><mark class="highlight-red">Creational Patterns</mark></strong></p><ul id="13d72270-bf23-4886-9262-b095e507b76a" class="bulleted-list"><li style="list-style-type:disc">concern the process of object creation</li></ul><ul id="3b3889b1-483e-4050-9692-dc6eaa4ac10c" class="bulleted-list"><li style="list-style-type:disc">6 creational patterns:<ul id="24a85f12-af44-4102-999f-f2005ec79466" class="bulleted-list"><li style="list-style-type:circle">factory method<ul id="e05eaab5-7995-487b-9387-47ac39a13637" class="bulleted-list"><li style="list-style-type:square">intent: define an interface for creating an object, but let subclasses decide which class to instantiate</li></ul><ul id="59f17567-bf1f-4082-95ca-5b275d1b656f" class="bulleted-list"><li style="list-style-type:square">whenever creating objects with same or close related behavior</li></ul><ul id="7ee30cd5-c89f-4b0e-9268-f886b176a658" class="bulleted-list"><li style="list-style-type:square">uses encapsulation</li></ul><ul id="5a9850ec-2bfa-4dcf-829d-55810218446c" class="bulleted-list"><li style="list-style-type:square">An example:</li></ul><pre id="ac0bf1d8-9cf2-4b1c-88e2-201674787035" class="code"><code>// Pizza interface and its implementations
+interface Pizza {
+    void prepare();
+    void bake();
+    void cut();
+    void box();
+}
+
+class CheesePizza implements Pizza {
+    @Override
+    public void prepare() {
+        System.out.println(&quot;Preparing Cheese Pizza&quot;);
+    }
+    
+    @Override
+    public void bake() {
+        System.out.println(&quot;Baking Cheese Pizza&quot;);
+    }
+    
+    @Override
+    public void cut() {
+        System.out.println(&quot;Cutting Cheese Pizza&quot;);
+    }
+    
+    @Override
+    public void box() {
+        System.out.println(&quot;Boxing Cheese Pizza&quot;);
+    }
+}
+
+class PepperoniPizza implements Pizza {
+    // Similar methods as CheesePizza, but with Pepperoni-specific steps
+}
+
+class VeggiePizza implements Pizza {
+    // Similar methods as CheesePizza, but with Veggie-specific steps
+}
+
+// PizzaFactory interface with its implementations
+interface PizzaFactory {
+    Pizza createPizza();
+}
+
+class CheesePizzaFactory implements PizzaFactory {
+    @Override
+    public Pizza createPizza() {
+        return new CheesePizza();
+    }
+}
+
+class PepperoniPizzaFactory implements PizzaFactory {
+    // Similar implementation as CheesePizzaFactory, but for PepperoniPizza
+}
+
+class VeggiePizzaFactory implements PizzaFactory {
+    // Similar implementation as CheesePizzaFactory, but for VeggiePizza
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        PizzaFactory factory = new CheesePizzaFactory();
+        Pizza pizza = factory.createPizza();
+        
+        pizza.prepare();
+        pizza.bake();
+        pizza.cut();
+        pizza.box();
+    }
+}</code></pre></li></ul><ul id="b718789a-2b0d-43c8-9464-0b0f69a01e2e" class="bulleted-list"><li style="list-style-type:circle">abstract factory</li></ul><ul id="183dc1df-f188-4766-975f-9b6f5dbe9607" class="bulleted-list"><li style="list-style-type:circle">singleton<ul id="45069ae9-6382-43a3-968d-c6f4275db531" class="bulleted-list"><li style="list-style-type:square">intent: ensure a class has only one instance, and provide a global point of access to it<figure id="c50fa31c-b53e-4661-a524-bf08ffd7fae3" class="image"><a href="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/Screenshot_2023-06-26_at_10.55.07_AM.png"><img style="width:192px" src="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/Screenshot_2023-06-26_at_10.55.07_AM.png"/></a></figure></li></ul><ul id="9f5ce290-e4d8-44d2-84ff-cf14b77ae9a2" class="bulleted-list"><li style="list-style-type:square">Example of Singleton:</li></ul><pre id="44dbf8ea-24fe-44b9-b1d3-c102482c2941" class="code"><code>// final class to prevent other classes from extending it
+final class Manager {
+	private static Manager manager;
+
+	// private constructer to prevent instantiation outside the class
+	private Manager() {
+	}
+
+	public static Manager getInstance() {
+		if (manager == null) {
+			manager = new Manager();
+		}
+		return manager;
+	}
+}
+
+public class SingletonExample {
+	public static void main(String [] args) {
+		Manager m1 = Manager.getInstance();
+		Manager m2 = Manager.getInstance();
+		System.out.println(m1 == m2);
+		// returns true, b/c pointing to same manager as there is only one manager b/c private
+	}
+}</code></pre></li></ul><ul id="bf2f8f26-dd0b-4b18-837e-c078f3dde720" class="bulleted-list"><li style="list-style-type:circle">prototype</li></ul><ul id="3b21db54-b1e9-4b5b-a857-18506eb0ec60" class="bulleted-list"><li style="list-style-type:circle">builder</li></ul><ul id="a3605355-61be-4e2f-b639-f198fd4bc315" class="bulleted-list"><li style="list-style-type:circle">object pool</li></ul></li></ul><p id="92876420-ae68-4d65-b945-a6b0291b69a1" class=""><strong><mark class="highlight-red">Structural Patterns</mark></strong></p><ul id="897ca299-6ec3-4f85-80b9-4a83a8d8e980" class="bulleted-list"><li style="list-style-type:disc">deal with composition of classes or objects</li></ul><ul id="1c48af7e-bab3-4de3-b43b-3b6b0378f790" class="bulleted-list"><li style="list-style-type:disc">7 structural patterns:<ul id="1e557353-230a-40a8-a480-ed8737564745" class="bulleted-list"><li style="list-style-type:circle">adapter<ul id="17f1d199-9c63-419d-8976-ede5d7943ac9" class="bulleted-list"><li style="list-style-type:square">very important</li></ul><ul id="346d70b9-8891-46bd-9d58-ea6b8e1d56c6" class="bulleted-list"><li style="list-style-type:square">intent: let classes work together that couldn’t otherwise because of incompatible interfaces</li></ul><ul id="03a794c4-febc-4225-ac71-5f0fd9b8c3cb" class="bulleted-list"><li style="list-style-type:square">helps things work together</li></ul><ul id="f049c67f-b782-4aa5-9ca8-1c1b968bd575" class="bulleted-list"><li style="list-style-type:square">note: for each adaptee there should be a corresponding adapter</li></ul><ul id="c0da2afa-2cdb-471a-b3f3-b4fec7b0b569" class="bulleted-list"><li style="list-style-type:square">Example of Adapter design pattern:</li></ul><pre id="c7bed6f9-d712-48bc-910a-034a3a307c46" class="code"><code>class Client {
+	public void foo(Target t) {
+		System.out.println(t.add(2,3));
+	}
+}
+
+interface Target {
+	public int add(int a, int b);
+}
+
+class Adaptee {
+	public int sum(int a, int b) {
+		return a + b;
+	}
+}
+
+class Adapter implements Target {
+	Adaptee adaptee;
+	
+	public Adapter(Adaptee adaptee) {
+		this.adaptee = adaptee;
+	}
+	
+	public int add(int a, int b) {
+		return adaptee.sum(a,b);
+	}
+}</code></pre><ul id="60513d36-2387-468b-b849-f869f363a431" class="bulleted-list"><li style="list-style-type:square">More self notes:<ul id="27e79823-8628-4992-8b9b-61270fae74a3" class="bulleted-list"><li style="list-style-type:disc">allows objects with incompatible interfaces to collaborate with one another</li></ul><figure id="231c9b4a-dad8-45a4-a25d-160a2c2169a6" class="image"><a href="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/IMG_0060.jpeg"><img style="width:1138px" src="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/IMG_0060.jpeg"/></a></figure><figure id="2ee28b41-a4c8-4f00-a004-6a4eafe42865" class="image"><a href="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/IMG_6424.heic"><img src="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/IMG_6424.heic"/></a></figure></li></ul></li></ul><pre id="c1ebd583-9e32-4093-a11c-08e24b4a7dd9" class="code"><code>// Existing interface for working with XML-based weather data
+interface XMLWeatherService {
+    void fetchXMLWeatherData();
+}
+
+// Existing class implementing the XMLWeatherService interface
+class XMLWeatherServiceImpl implements XMLWeatherService {
+    @Override
+    public void fetchXMLWeatherData() {
+        System.out.println(&quot;Fetching weather data in XML format...&quot;);
+        // Code to fetch XML weather data
+    }
+}
+
+// New interface for working with JSON-based weather data
+interface JSONWeatherService {
+    void fetchJSONWeatherData();
+}
+
+// New weather service providing data in JSON format
+class JSONWeatherServiceImpl implements JSONWeatherService {
+    @Override
+    public void fetchJSONWeatherData() {
+        System.out.println(&quot;Fetching weather data in JSON format...&quot;);
+        // Code to fetch JSON weather data
+    }
+}
+
+// Adapter class to make JSONWeatherService compatible with XMLWeatherService
+class JSONToXMLAdapter implements XMLWeatherService {
+    private JSONWeatherService jsonWeatherService;
+
+    public JSONToXMLAdapter(JSONWeatherService jsonWeatherService) {
+        this.jsonWeatherService = jsonWeatherService;
+    }
+
+    @Override
+    public void fetchXMLWeatherData() {
+        jsonWeatherService.fetchJSONWeatherData();
+        // Additional code to convert JSON data to XML format if needed
+        System.out.println(&quot;Converting JSON data to XML...&quot;);
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        // Using the JSONWeatherService directly
+        JSONWeatherService jsonWeatherService = new JSONWeatherServiceImpl();
+        jsonWeatherService.fetchJSONWeatherData();
+
+        // Using the XMLWeatherService through the adapter
+        XMLWeatherService xmlWeatherService = new JSONToXMLAdapter(jsonWeatherService);
+        xmlWeatherService.fetchXMLWeatherData();
+    }
+}</code></pre><ul id="5eaf6d75-0076-4b79-b247-14e6f3f1d425" class="bulleted-list"><li style="list-style-type:circle">bridge</li></ul><ul id="c4aab042-f0d1-4a64-98e8-f26743edda37" class="bulleted-list"><li style="list-style-type:circle">composite</li></ul><ul id="674b3520-8b0e-4ce5-bf39-090b6911dbd8" class="bulleted-list"><li style="list-style-type:circle">decorator</li></ul><ul id="d6cc05e2-aae4-4b31-bdf4-52216bdc2070" class="bulleted-list"><li style="list-style-type:circle">facade<ul id="5fd7db9d-093f-4d54-8dee-1c656043e4ac" class="bulleted-list"><li style="list-style-type:square">intent: hide complexities and provide a unified interface to a set of interfaces in a subsystem</li></ul><ul id="2b1f90f2-760c-47f1-87f4-a4d8b2d15c94" class="bulleted-list"><li style="list-style-type:square">instead of requiring client to invoke a lot methods, create a simple function that takes input from user then tackle the complexity and return output to user.</li></ul><ul id="08026746-1876-4b73-b36f-12be445f05a5" class="bulleted-list"><li style="list-style-type:square">help with client experience (they don’t need to go through all the complex system)</li></ul><ul id="3d8d929e-5ae4-4223-9b87-994bae87f517" class="bulleted-list"><li style="list-style-type:square">facade is written by people who are managing/developing the complex system, not the client.</li></ul><ul id="aec339ad-2c31-4277-9f5e-b6e1441a0cb9" class="bulleted-list"><li style="list-style-type:square">Example:</li></ul><pre id="f83ac8df-5900-4696-bac8-db371df2e690" class="code"><code>// Complex subsystems
+class Graphics {
+    void initialize() {
+        // Initialize graphics
+    }
+    
+    void render() {
+        // Render graphics
+    }
+}
+
+class Audio {
+    void initialize() {
+        // Initialize audio
+    }
+    
+    void playSound() {
+        // Play sound
+    }
+}
+
+class Physics {
+    void initialize() {
+        // Initialize physics
+    }
+    
+    void updatePhysics() {
+        // Update physics calculations
+    }
+}
+
+// Game Engine facade
+class GameEngine {
+    private Graphics graphics;
+    private Audio audio;
+    private Physics physics;
+    
+    public GameEngine() {
+        graphics = new Graphics();
+        audio = new Audio();
+        physics = new Physics();
+    }
+    
+    void initialize() {
+        graphics.initialize();
+        audio.initialize();
+        physics.initialize();
+    }
+    
+    void runGameLoop() {
+        while (true) {
+            graphics.render();
+            audio.playSound();
+            physics.updatePhysics();
+            // Other game-related logic
+        }
+    }
+}
+
+// Main game class
+public class Main {
+    public static void main(String[] args) {
+        GameEngine gameEngine = new GameEngine();
+        gameEngine.initialize();
+        gameEngine.runGameLoop();
+    }
+}</code></pre></li></ul><ul id="3529ef1c-7c09-4f77-9d3f-e11f12cf48af" class="bulleted-list"><li style="list-style-type:circle">flyweight</li></ul><ul id="2e54143d-144f-4f70-afcb-00548c7ad101" class="bulleted-list"><li style="list-style-type:circle">proxy</li></ul></li></ul><p id="41328f16-e724-45d9-b7a7-1436be3146e4" class=""><strong><mark class="highlight-red">Behavioral Patterns</mark></strong></p><ul id="ad2a31c2-5bc8-4d49-bb59-6b7bd0c48c11" class="bulleted-list"><li style="list-style-type:disc">characterize the ways which classes or objects interact and distribute responsibility</li></ul><ul id="3e418a99-8874-4832-a063-ef19a4200fbd" class="bulleted-list"><li style="list-style-type:disc">10 behavioral patterns:<ul id="2d332ff2-cf23-4b40-85de-b4c672b98d16" class="bulleted-list"><li style="list-style-type:circle">chain of responsibility</li></ul><ul id="f14929bc-fb6a-4aea-80bf-94a3daffdcf0" class="bulleted-list"><li style="list-style-type:circle">command</li></ul><ul id="02bf6571-f593-4fa6-923b-42d98af25f9b" class="bulleted-list"><li style="list-style-type:circle">interpreter</li></ul><ul id="2ba57fce-8e67-4d6a-a6be-9e5d6fa96f5a" class="bulleted-list"><li style="list-style-type:circle">iterator</li></ul><ul id="45c27ace-6811-4546-8ab3-14ffbc47f6e1" class="bulleted-list"><li style="list-style-type:circle">mediator</li></ul><ul id="6dbf9fb6-c021-4d0d-93d1-34a476d40908" class="bulleted-list"><li style="list-style-type:circle">memento</li></ul><ul id="c6f30e9e-d72a-40c7-aa2f-2f911ffe9da1" class="bulleted-list"><li style="list-style-type:circle">observer<ul id="57afed43-24b3-489c-81f0-9a4f2bf482e6" class="bulleted-list"><li style="list-style-type:square">intent: define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically</li></ul><ul id="2f197ef3-a65e-424f-b0e5-b36de02c24b8" class="block-color-default bulleted-list"><li style="list-style-type:square">Self Notes:<ul id="4a929a35-69b5-4c60-bde6-1edf141f344a" class="bulleted-list"><li style="list-style-type:disc">an example is like a subscription system for store updates</li></ul><ul id="addbfa77-bb87-400e-997c-e016c0d9a46a" class="bulleted-list"><li style="list-style-type:disc">observer dp notifies multiple objects, or subscribers, about any events that happen to the object they’re observing, or publisher</li></ul><ul id="5d6415e6-a79b-4927-aec2-8fae271619b3" class="bulleted-list"><li style="list-style-type:disc">makes code more open for extension (OCP)</li></ul><figure id="beceb2e2-bdbb-41c1-a3f7-4815fa81372d" class="image"><a href="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/IMG_0061.jpeg"><img style="width:1122px" src="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/IMG_0061.jpeg"/></a></figure></li></ul><ul id="fe43df21-bc22-4b03-ba34-8706ab6c18cd" class="bulleted-list"><li style="list-style-type:square">Example of observer design pattern: </li></ul><pre id="4927ff92-b494-40b6-9559-00d0274ac6ff" class="code"><code>public class Store {
+	private final NotificationService notificationService;
+	
+	public Store() {
+		notificationService = new NotificationService();
+	}
+
+	public void newItemPromotion() {
+		notificationService.notify();
+	}
+
+	public NotificationService getService() {
+		return notificationService;
+	}
+}
+
+public class NotificationService {
+	private final List&lt;EmailMSGListener&gt; customers;
+	
+	public NotificationService() {
+		customers = new ArrayList&lt;&gt;();
+	}
+
+	public void subscribe(EmailMSGListener listener) {
+		customers.add(listener);
+	}
+
+	public void unsubscribe(EmailMSGListener listener) {
+		customers.remove(listener);
+	}
+
+	public void notify() {
+		customers.forEach(listener -&gt; listener.update());
+	}
+}
+
+public class EmailMSGListener implements EventListener{
+	private final String email;
+	
+	public EmailMSGListener(String email) {
+		this.email = email;
+	}
+
+	@Override
+	public void update() {
+		// Actually send the email
+	}
+}
+
+public class MobileAppListener implements EventListener {
+	private final String username;
+
+	public MobileAppListener(String username) {
+		this.username = username;
+	}
+
+	@Override
+	public void update() {
+		// Actually send the push notification
+	}
+}
+
+public interface EventListener {
+	void update();
+}
+
+// Client code
+public static void main(String [] args) {
+	Store store = new Store();
+	store.getNotificationService().subscribe(
+		new EmailMSGListener(&quot;geekific@like.com&quot;)
+	);
+	store.getNotificationService().subscribe(
+		new EmailMSGListener(&quot;geekific@subs.com&quot;)
+	);
+	store.getNotificationService().subscribe(
+		new MobileAppListener(&quot;GeekificLnS&quot;)
+	);
+	store.newItemPromotion();
+}</code></pre><p id="ca4de019-0508-4c4e-82cf-f9a8ada5ba8a" class="">
+</p></li></ul><ul id="a951db1c-9cb5-464d-b6e9-a9d6cdb66451" class="bulleted-list"><li style="list-style-type:circle">state</li></ul><ul id="2f772df8-d333-46de-bda1-3b81255f8281" class="bulleted-list"><li style="list-style-type:circle">strategy<ul id="ed3cbaaa-8458-4282-ab33-47e623435a92" class="bulleted-list"><li style="list-style-type:square">intent: define a family of algorithms, encapsulate each one, and make them interchangeable</li></ul><ul id="018c20c8-5cf6-4dca-965f-5b181e56c1b8" class="bulleted-list"><li style="list-style-type:square">allows for conforming to OCP and SRP</li></ul><ul id="1c2f21e0-725f-4958-915c-ed71466d5dd6" class="bulleted-list"><li style="list-style-type:square">define a family of algorithms, puts each of them in a separate class, and makes their objects interchangeable</li></ul><ul id="01729e95-0c46-4506-97c6-1c1c76129e98" class="bulleted-list"><li style="list-style-type:square">strategy class has no visibility on how “payment” is being conducted as it is making use of strategy interface (PaymentStrategy)</li></ul><ul id="737f7c7e-0964-4933-b6bf-5390cf1157ae" class="bulleted-list"><li style="list-style-type:square">can add new algorithms or change existing ones without changing code of service or other strategies.</li></ul><ul id="b09e4bc2-20d1-4c5f-b306-211ce3fec64a" class="bulleted-list"><li style="list-style-type:square">define strategy and pass to service</li></ul><ul id="1058e00f-71dd-4905-8068-41d5887cded2" class="bulleted-list"><li style="list-style-type:square">example:<ul id="23cf872d-30b3-4a1b-8a78-17b4e30bd502" class="bulleted-list"><li style="list-style-type:disc">think of ConcreteStrategy (add, subtract, multiply, divide)</li></ul><ul id="b7d576bc-8c1e-414f-a671-77e7e214ff44" class="bulleted-list"><li style="list-style-type:disc">client wants to access a class Content where we are trying to determine what math operation we want to use.</li></ul><ul id="7f5b97d0-2df2-43de-956a-177ebee9c4d0" class="bulleted-list"><li style="list-style-type:disc">so we can apply a strategy</li></ul><ul id="d5e72199-e92c-416c-b402-11ed80c9e615" class="bulleted-list"><li style="list-style-type:disc">create an interface Strategy that is used by Context to execute a strategy (choose an operation).</li></ul><ul id="e125ef57-e056-4808-8e4e-15dd5bed2202" class="bulleted-list"><li style="list-style-type:disc">so from Context, the client can access an operation whilst the devs can add new operations such as exponents, etc. and also modify operations is needed.</li></ul></li></ul></li></ul><ul id="abad5b91-41ad-48ff-a46b-2ea9f6c1f660" class="bulleted-list"><li style="list-style-type:circle">template</li></ul></li></ul><p id="c5027cbf-69d1-4a88-ba09-1f93eb72b585" class="">
+</p><p id="07f73a73-2077-4242-beeb-fd90a14a618a" class="">
+</p><figure id="635aed39-c3e9-46b9-97d7-c3c2eeb1fcde" class="link-to-page"><a href="https://www.notion.so/CSCB07-Midterm-Review-Session-635aed39c3e946b997d7c3c2eeb1fcde?pvs=21">CSCB07 Midterm Review Session</a></figure><h2 id="edf15aac-31ad-4c51-aea6-d00a38e6b5c7" class=""><mark class="highlight-brown">SDLC</mark></h2><ul id="2c551953-f9a1-4fa0-93d2-4f8fcc167fc3" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-purple">Planning</mark> - develop a plan for creating the concept or evolution of the concept</li></ul><ul id="e9355810-ac15-4227-b024-cce1848f96ce" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-purple">Analysis</mark> - analyze the needs of those using the system. Create detailed requirements</li></ul><ul id="25832259-959e-45cf-b3ea-43e8ed018a03" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-purple">Design</mark> - coming up with high level descriptions of system to be implemented in implementation phase (uml)</li></ul><ul id="5b5e528a-7b9e-4dcf-95db-a7dbba8e1c58" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-purple">Implementation</mark> - where you complete the work of developing and testing the system</li></ul><ul id="5d890b9d-86ba-495b-a0dd-a555744b3a17" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-purple">Maintenance</mark> - doing any needed maintenance to keep system running (fix bugs, optimize performance, accommodate new tech)</li></ul><h3 id="ab25bd8e-e850-441e-beab-89b448dacfda" class=""><mark class="highlight-purple">Waterfall</mark></h3><ul id="7b92b12f-ad2a-4049-b712-a525ee17bf21" class="bulleted-list"><li style="list-style-type:disc">a sequential (non-iterative) model </li></ul><ul id="39d895ff-3cc0-43a1-b146-37d619582c99" class="bulleted-list"><li style="list-style-type:disc">involves a large amount of upfront work, in a n attempt to reduce the amount of work done in later phases of the project</li></ul><ul id="5f0ae152-8d03-4cc4-a9fd-823348ac56ad" class="bulleted-list"><li style="list-style-type:disc">main disadvantage: need to finalize a certain phase before starting the next phase (complete stages perfectly); no flexibility</li></ul><ul id="a6540cdf-e146-48c4-83d3-ac48218f0cb2" class="bulleted-list"><li style="list-style-type:disc">advantages: for small projects, easy to implement (structured)</li></ul><h3 id="5250f357-6883-48b3-9409-2cd4b6c7b581" class=""><mark class="highlight-purple">Spiral</mark></h3><ul id="da0e35f6-352a-41ce-9de6-abcdbc5f5900" class="bulleted-list"><li style="list-style-type:disc">many iterations of Waterfall</li></ul><ul id="b9942dae-8831-4ee5-9a48-93345859e683" class="bulleted-list"><li style="list-style-type:disc">risk-driven model</li></ul><ul id="5d5ad5a3-7bbe-4eb5-9ebd-a71fe485986e" class="bulleted-list"><li style="list-style-type:disc">more time is spent on a given phase based on the amount of risk that phase poses for the project</li></ul><ul id="11f90847-e302-4d14-ac53-067af87f57cd" class="bulleted-list"><li style="list-style-type:disc">used for high risk projects (projects that requires a lot of money; healthcare, finance, nuclear reactor)</li></ul><ul id="5c404352-4e87-4433-b53d-4e96b9e0e022" class="bulleted-list"><li style="list-style-type:disc">disadvantage: require people who a very specific skill set; high costs</li></ul><h3 id="1f51df5c-4264-46b5-8875-e7d60e3a34c3" class=""><mark class="highlight-purple">Agile</mark></h3><ul id="0f3aba24-4c31-4e44-8c31-388029760e23" class="bulleted-list"><li style="list-style-type:disc">issues with Waterfall<ul id="9eee98b3-2f8d-4b85-840f-2c00de38ae09" class="bulleted-list"><li style="list-style-type:circle">inappropriate when requirements change frequently</li></ul><ul id="d930c51f-6798-4d6c-ba5e-5005313fc8e8" class="bulleted-list"><li style="list-style-type:circle">time gets squeezed the further into the process you get</li></ul></li></ul><ul id="0bbdf5e0-b066-4606-9064-c054ba34b7b0" class="bulleted-list"><li style="list-style-type:disc"><strong>Agile Methodologies</strong><ul id="93b9cb43-16b0-477d-bd79-d5d1b8c44a4a" class="bulleted-list"><li style="list-style-type:circle">extreme programming (XP)</li></ul><ul id="6481921b-fb06-4e24-9879-0e840f0d8b7e" class="bulleted-list"><li style="list-style-type:circle">scrum</li></ul><ul id="3e858013-87ca-4f1e-93c3-06023c26337d" class="bulleted-list"><li style="list-style-type:circle">test-driven development (TDD)</li></ul><ul id="b3d3174d-b482-4044-807d-967a85122a68" class="bulleted-list"><li style="list-style-type:circle">feature-driven development (FDD)</li></ul></li></ul><ul id="8e241534-fccc-47fc-853d-49be6c6b060a" class="bulleted-list"><li style="list-style-type:disc">Agile Manifesto<ul id="2f425ce1-58ae-4aec-afb3-adb02276f2db" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-teal">Individuals and interactions</mark> over <mark class="highlight-red">processes and tools</mark></li></ul><ul id="3ad0cd5d-d76a-430a-ac81-9d1779b3740f" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-teal">working software</mark> over <mark class="highlight-red">comprehensive negotiation</mark></li></ul><ul id="29e4e63a-6870-44f8-9bb7-70085b2aa9ef" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-teal">customer collaboration </mark>over <mark class="highlight-red">contract negotiation</mark></li></ul><ul id="efb6204c-9790-40e7-a40e-495a6d0f4620" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-teal">responding to change</mark> over<mark class="highlight-red"> following a plan</mark> (major principle)</li></ul></li></ul><p id="df6cd2ac-415e-464d-aa0d-66eb69c451f0" class="">
+</p><h3 id="0844a265-5ee5-45fd-8db9-fbd72f69c7f6" class="">eXtreme Programming (XP)</h3><ul id="e2999c0b-6dea-466e-8988-1eebb87f925f" class="bulleted-list"><li style="list-style-type:disc">one of the most rigorous forms of Agile</li></ul><ul id="01179fa1-77a0-45cd-a18e-8443f1c4d055" class="bulleted-list"><li style="list-style-type:disc">one person codes while others watch them</li></ul><ul id="36478bb8-0d87-4d93-83c2-10f2270c7e66" class="bulleted-list"><li style="list-style-type:disc">requires extreme amounts of testing</li></ul><h3 id="2274b894-75bb-4145-9367-97c7eb4534eb" class="">Scrum</h3><ul id="4a2eb531-2e0d-4d57-af09-9fd46158ee49" class="bulleted-list"><li style="list-style-type:disc">scrum is currently one of the most widely used methodologies of software development</li></ul><ul id="e107a40d-b238-407a-98d8-7f24ec87b715" class="bulleted-list"><li style="list-style-type:disc">Scrum process:<figure id="afadd164-ceef-4333-bb50-94d589e2f203" class="image"><a href="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/Screenshot_2023-07-10_at_9.47.44_AM.png"><img style="width:1160px" src="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/Screenshot_2023-07-10_at_9.47.44_AM.png"/></a><figcaption>Note: backlog is dynamic</figcaption></figure></li></ul><ul id="0d6689dd-5392-4c38-97db-563d41fcde26" class="bulleted-list"><li style="list-style-type:disc">ROLES:<ul id="0fc9bc95-b387-4a49-a989-20b7a9726394" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">Product Owner</mark><ul id="725124f6-396c-4f82-92b9-e02ffa7d426a" class="bulleted-list"><li style="list-style-type:square">responsible for delivering requirements and accepting demos</li></ul><ul id="a250ece4-6119-4f7a-871a-36ee1ed53cfc" class="bulleted-list"><li style="list-style-type:square">involved in planning session</li></ul><ul id="eafa675f-bf8c-4aee-acef-d9f7abfa16e5" class="bulleted-list"><li style="list-style-type:square">needs to talk to stakeholders</li></ul><ul id="dd611035-b75a-42f5-827b-81124e5d106c" class="bulleted-list"><li style="list-style-type:square">person who decides what goes in product backlog and what goes in scrum backlog</li></ul></li></ul><ul id="d4d31ae6-716a-475b-9565-55fe3befb8cc" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">Scrum Master</mark><ul id="b363cebc-1e9e-44cf-90bc-a900106f1dbd" class="bulleted-list"><li style="list-style-type:square">responsible for removing impediments</li></ul><ul id="1c99c930-5027-4db9-8fd5-0d79444d2fc7" class="bulleted-list"><li style="list-style-type:square">not allowed to tell people what to do</li></ul><ul id="3569ccb0-b930-4449-9a51-d29c1aa60eba" class="bulleted-list"><li style="list-style-type:square">job is to facilitate things, make job easier for team members</li></ul></li></ul><ul id="d4fc2d57-80c5-4dc7-92af-b2cf48ac433d" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">Team Members</mark><ul id="404a0042-cf56-4d79-a0b5-32f6c3d5da81" class="bulleted-list"><li style="list-style-type:square">no one has a fixed role other than the scrum master and product owner</li></ul><ul id="dab10254-5229-4c4b-83f3-228732bc58c5" class="bulleted-list"><li style="list-style-type:square">everyone takes on tasks, and completes them based on what they are most comfortable with</li></ul></li></ul></li></ul><ul id="20a0cfef-3edc-42cd-9b0b-ab49de52b1fa" class="bulleted-list"><li style="list-style-type:disc">SPRINT:<ul id="2d590b9c-7c79-40ec-8f02-f14ff23acdd2" class="bulleted-list"><li style="list-style-type:circle">a fixed time to deliver a working set of features, that are reviewed in a demonstration to the product owner</li></ul><ul id="c31a26c8-6648-43b0-b8a6-9dab2b8ea83b" class="bulleted-list"><li style="list-style-type:circle">broken into “User Stories”<ul id="c27f5552-f70a-45fb-b615-efb5e0285217" class="bulleted-list"><li style="list-style-type:square">User Story: “As a {ACTOR/OBJECT} I want to {ACTION} so that {RESULT}”</li></ul></li></ul><ul id="23ed41b7-ebd4-4ba6-bbc4-13b0a87c1faa" class="bulleted-list"><li style="list-style-type:circle">usually between 1-4 weeks in length</li></ul></li></ul><ul id="a57874c4-dff6-41dd-be1e-2ecaa5108f9d" class="bulleted-list"><li style="list-style-type:disc">PLANNING POKER:<ul id="18f4f72b-1924-4369-b076-d5d4df2ec84f" class="bulleted-list"><li style="list-style-type:circle">In scrum, we do not assign time to tasks, but assign arbitrary points. This is a form of estimation that helps gauge how work something will take to complete.</li></ul></li></ul><ul id="e313ffaf-8463-4da7-84c1-60fc3d41e217" class="bulleted-list"><li style="list-style-type:disc">WORKING AGREEMENT:<ul id="e70bf586-0ada-45fc-814f-6bdeeb5229be" class="bulleted-list"><li style="list-style-type:circle">a series of statements that everyone on the team agrees to about how the team will work</li></ul></li></ul><ul id="68f08da6-5c27-4e85-abd0-0073d84b97d0" class="bulleted-list"><li style="list-style-type:disc">DEFINITION OF DONE:<ul id="d69742d2-c91a-4180-b85d-550873818e3a" class="bulleted-list"><li style="list-style-type:circle">a formal agreement of when work is considered complete</li></ul><ul id="f4d8cfc3-81b6-45ad-9655-af098b1e4ac0" class="bulleted-list"><li style="list-style-type:circle">it is important that team comes to an agreement on this definition before they start work</li></ul></li></ul><h3 id="30494703-10aa-4f81-990f-adfcea2471b0" class="">TEST DRIVEN DEVELOPMENT (TDD)</h3><ul id="0fa5a2de-5057-48d3-be5f-6c5ff15e3946" class="bulleted-list"><li style="list-style-type:disc">TDD is a way to develop software that revolves around writing test cases</li></ul><ul id="ae39c429-5049-4a77-9622-c9f5bed0953b" class="bulleted-list"><li style="list-style-type:disc">The basic concept is to write the unit tests needed to be passed for a feature to be considered working. You then code to the unit tests –writing the minimum amount for the tests to succeed</li></ul><ul id="2de65e7c-9f69-4211-9440-9e076ac10310" class="bulleted-list"><li style="list-style-type:disc">Once working, you review and refactor. Then move on to the next set of tests.</li></ul><figure id="58e4c19a-b134-4220-b304-ab6dff8e26b0" class="image"><a href="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/Screenshot_2023-07-10_at_10.22.10_AM.png"><img style="width:950px" src="CSCB07%20Notes%20b1d45c5a566b4242991839dbc013dc36/Screenshot_2023-07-10_at_10.22.10_AM.png"/></a><figcaption>Note: write as less code as possible when correcting errors</figcaption></figure><h3 id="344ff4a4-d1b2-4de0-af7e-ffec3f8353a2" class="">FEATURE DRIVEN DEVELOPMENT (FDD)</h3><ul id="d10b0ab0-a64b-4135-9473-6638a0761a92" class="bulleted-list"><li style="list-style-type:disc">based on the idea of building a focused model for the project, and then iterating on the features needed</li></ul><ul id="18884b1e-8474-4d74-b261-24b0dd1b4c3c" class="bulleted-list"><li style="list-style-type:disc">splits development into 5 major pieces:<ul id="45a83680-32f2-44f2-b67d-3d51dd36ea3e" class="bulleted-list"><li style="list-style-type:circle">develop overall model</li></ul><ul id="485a4cf2-aa43-4f42-b7c3-c95288e3d41d" class="bulleted-list"><li style="list-style-type:circle">build feature list</li></ul><ul id="f7c5b884-9e1e-435d-8a43-00a01f1d1ad5" class="bulleted-list"><li style="list-style-type:circle">plan by feature</li></ul><ul id="1f1f7d5c-d80e-4b5a-8715-1c6db11f7014" class="bulleted-list"><li style="list-style-type:circle">design by feature</li></ul><ul id="9e988932-d4ef-48aa-8b94-cacd7521077e" class="bulleted-list"><li style="list-style-type:circle">build by feature</li></ul></li></ul><h2 id="4d37a4ab-212c-4dcb-8fc2-4c91a4a8fc4e" class="">Intro to Android</h2><ul id="7b605090-8faa-488a-ad2a-eb011b59c814" class="bulleted-list"><li style="list-style-type:disc">VIEW:<ul id="be01197c-a00a-4154-8a06-d451281d10ee" class="bulleted-list"><li style="list-style-type:circle">most GUI components in Android applications are instances of the View class or one of its subclasses (ie. Button, EditText, ImageView)</li></ul></li></ul><ul id="175a15f4-cf3e-41e5-9ab6-f902dcd520aa" class="bulleted-list"><li style="list-style-type:disc">COMMON GUI COMPONENTS:<ul id="9579b75a-6d9a-4a2f-aa41-9377fadbd44d" class="bulleted-list"><li style="list-style-type:circle">TextView</li></ul><ul id="afb546e8-f4cf-43b8-919a-a6bc1102403f" class="bulleted-list"><li style="list-style-type:circle">EditText</li></ul><ul id="1dfc1122-9ea0-4da2-8c2f-c58a61bab58c" class="bulleted-list"><li style="list-style-type:circle">Button</li></ul><ul id="30c5d0d0-f011-4145-8a99-50831d126c7b" class="bulleted-list"><li style="list-style-type:circle">Switch</li></ul><ul id="767e1e73-741c-4fd3-8b9b-421a6ed26529" class="bulleted-list"><li style="list-style-type:circle">Spinner</li></ul><p id="10b61174-4cd7-4b3b-964d-d91d2af3b276" class="">
+</p></li></ul><h3 id="578b63eb-9674-4362-9d34-8f78cfcd413f" class="">STORING DATA - ANDROID</h3><ul id="d6c96a0f-5410-4975-9a6c-d288851df957" class="bulleted-list"><li style="list-style-type:disc">Data storage options<ul id="58fccd61-5df5-465a-b324-900c890a49bd" class="bulleted-list"><li style="list-style-type:circle">file system</li></ul><ul id="240d5916-fa94-4468-9f66-db66b3dcbc69" class="bulleted-list"><li style="list-style-type:circle">shared preferences</li></ul><ul id="e26949b6-010d-4e41-91d7-c7234f877496" class="bulleted-list"><li style="list-style-type:circle">databases<ul id="f7277ce6-d450-4fe4-9402-25b446d3a63f" class="bulleted-list"><li style="list-style-type:square">SQLite, Firebase Realtime Database</li></ul></li></ul></li></ul><h3 id="d9883c47-2fa8-488e-9dfc-851c9078fb6c" class="">File System</h3><ul id="eb7ee422-aa88-47ba-b1af-781eae03d052" class="bulleted-list"><li style="list-style-type:disc">android’s file system consists of six main partitions<ul id="94d6c481-d633-45fd-b853-783e6d14378f" class="bulleted-list"><li style="list-style-type:circle">/boot</li></ul><ul id="5959f045-3698-472b-9402-5ee7543d6398" class="bulleted-list"><li style="list-style-type:circle">/system</li></ul><ul id="5faa9ae3-918e-48de-934e-8e9284033371" class="bulleted-list"><li style="list-style-type:circle">/recovery</li></ul><ul id="808abf4e-37e7-487b-9fec-191d1ae58333" class="bulleted-list"><li style="list-style-type:circle">/data</li></ul><ul id="24da79f3-a871-4b17-9627-c7a3afed4648" class="bulleted-list"><li style="list-style-type:circle">/cache</li></ul><ul id="64aeec6a-f0d6-41f7-9f36-8603b62991a8" class="bulleted-list"><li style="list-style-type:circle">/misc</li></ul></li></ul><ul id="5ab8bb1c-4c98-4b78-aac5-b852c3fb92dc" class="bulleted-list"><li style="list-style-type:disc">reading/writing data to a file on internal storage can be done with:<ul id="26b0dd2a-fe81-47e0-ab8d-ffd071d921ed" class="bulleted-list"><li style="list-style-type:circle">openFileInput( )</li></ul><ul id="f2c47a32-260f-497f-96a7-cd7b4ab0b235" class="bulleted-list"><li style="list-style-type:circle">openFileOuput( )</li></ul></li></ul><h3 id="f2960bec-ef31-4600-96b1-c0d0528b9beb" class="">TESTING</h3><ul id="96de3e98-bbdd-4880-a1b9-b072919f7542" class="bulleted-list"><li style="list-style-type:disc">Example from lecture:</li></ul><pre id="7e67a217-3c4f-47d7-abb8-c94a1baa2588" class="code"><code>@Test
+void test_gcd() {
+	int ouput = Tools.gcd(4,6);
+	assertEquals(output,2);
+	// or assertTrue(output == 2);
+}
+
+class Tools {
+	static Circle createCircle(...){
+		/* ... */
+	}
+
+	/*
+	...
+	*/
+
+	static int gcd(int a, int b){
+		/* ... */
+	}
+}
+</code></pre><p id="e0576765-cc2f-49ff-9908-1171053b2a61" class="">
+</p><ul id="366371ce-333d-4f5c-bc7c-29711e2b688c" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-red">Testing Tools:</mark></strong><ul id="4eb475b2-476c-47b4-99d0-66530f6eede4" class="bulleted-list"><li style="list-style-type:circle">Testing (automated, manual testing)<ul id="b4a74061-6c04-4aa8-a40f-4499fbfb876c" class="bulleted-list"><li style="list-style-type:square">most used nowadays</li></ul></li></ul><ul id="29368f37-815e-4dd3-b106-2d3f9595415d" class="bulleted-list"><li style="list-style-type:circle">Reviews (code reviews)</li></ul><ul id="6d686ec5-b61a-4219-a1bc-feb79897e335" class="bulleted-list"><li style="list-style-type:circle">Formal Verification<ul id="3d3a7c6b-5868-441b-b007-331c18d6d640" class="bulleted-list"><li style="list-style-type:square">Disadvantages of formal verification:<ul id="51310f08-967c-46cc-85e1-bc80b1d5ec75" class="bulleted-list"><li style="list-style-type:disc">proofs are hard</li></ul><ul id="fba1c835-31c0-47fd-9571-81e3bcef5940" class="bulleted-list"><li style="list-style-type:disc">time consuming</li></ul><ul id="1e01cee6-c9d3-4c8a-bf2f-c55e74bbd545" class="bulleted-list"><li style="list-style-type:disc">not scalable (major disadvantage)</li></ul></li></ul></li></ul></li></ul><h3 id="d6f9f966-c80d-4cfb-a50d-ebf7390b30d6" class="">Testing Levels</h3><ul id="b48f33af-dc56-4e4c-b7db-c94f9fbfa713" class="bulleted-list"><li style="list-style-type:disc">Acceptance testing</li></ul><ul id="2bfb9957-0a0f-4e5e-874c-c0afed7ebfa2" class="bulleted-list"><li style="list-style-type:disc">System testing</li></ul><ul id="8be4fe79-b26b-437e-941c-942e372ad640" class="bulleted-list"><li style="list-style-type:disc">Integration testing</li></ul><ul id="3b403d2a-66be-4287-8906-13161f1b245a" class="bulleted-list"><li style="list-style-type:disc">Module testing</li></ul><ul id="f9a455d2-cf47-46ad-8463-1773dac4d706" class="bulleted-list"><li style="list-style-type:disc">Unit testing</li></ul><p id="2a00c64b-9bb8-4625-8f36-f996bbb2dc76" class=""><strong>Testing Approaches </strong><mark class="highlight-red"><strong>(Important concept)</strong></mark></p><ul id="4582a776-5dc0-4d15-af23-078d951dc357" class="bulleted-list"><li style="list-style-type:disc"><strong>Black-box testing</strong><ul id="a3778064-acf5-4d4c-b5a5-4401990cccb8" class="bulleted-list"><li style="list-style-type:circle">test are derived from external descriptions of the software</li></ul><ul id="d9d14ec3-bd44-46a2-afbb-0ff35e6a571f" class="bulleted-list"><li style="list-style-type:circle">testing without knowing internal structure of the box</li></ul><ul id="c5023c18-b52e-4a7b-b90b-d2a0eb77345a" class="bulleted-list"><li style="list-style-type:circle">easier and faster b/c don’t need to know structure of method, only need to know input output of method.</li></ul><ul id="0278a1e8-5922-46f8-a48c-880640ef8e40" class="bulleted-list"><li style="list-style-type:circle">thinking of the test in terms of the inputs and outputs of the method</li></ul><ul id="445140a2-45aa-4103-a439-df37900efa8c" class="bulleted-list"><li style="list-style-type:circle">don’t know structure necessarily hence will be testing “blindly”</li></ul></li></ul><ul id="517943a2-5e11-4054-8063-2fef0c69220e" class="bulleted-list"><li style="list-style-type:disc"><strong>White-box testing</strong><ul id="9397f4f8-4cc3-4e00-abdb-95a8a8804a2d" class="bulleted-list"><li style="list-style-type:circle">test are derived from the source code internals of the software</li></ul><ul id="0979b076-d357-4003-8edd-cb1131d7fe83" class="bulleted-list"><li style="list-style-type:circle">more expensive to apply</li></ul><ul id="51959934-954c-4c69-8e08-bcbe069255ba" class="bulleted-list"><li style="list-style-type:circle">actually have to know the structure of the method in order to the testing</li></ul><ul id="d7985020-2d3b-4770-a80f-ece77ac191a8" class="bulleted-list"><li style="list-style-type:circle">I know what to test b/c of understanding of method structure (ie. can cover all edges and nodes)</li></ul><p id="19a117ad-1e35-4032-bc63-da3c42bc1966" class="">
+</p></li></ul><p id="14c23d49-aa8e-48b3-a40a-64fcbe079384" class=""><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Why is software testing hard?</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></p><ul id="83dd76b9-c42f-4545-9128-94a555183066" class="bulleted-list"><li style="list-style-type:disc">knowing when to stop (enough testing or not)</li></ul><ul id="279eda6f-fdcb-4f9d-a745-2d00914a89e3" class="bulleted-list"><li style="list-style-type:disc">random/statistical testing is not effective</li></ul><p id="4ad55ded-386f-4737-8194-16c6cd9f4437" class=""><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Infamous Software Failures</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></p><ul id="ca9e193d-9d72-42f3-a0b7-e849f9d991c5" class="bulleted-list"><li style="list-style-type:disc">Northeast blackout of 2023</li></ul><ul id="9862a4bf-ba3b-41cb-890d-cae1ccf50a08" class="bulleted-list"><li style="list-style-type:disc">Ariane 5 explosion (1996)</li></ul><ul id="52d8e3de-6992-4ce5-9d27-838d8ec6213c" class="bulleted-list"><li style="list-style-type:disc">NASA’s Mars lander (1999)</li></ul><ul id="8c8b4151-81cb-47cd-98d2-37579aa667b8" class="bulleted-list"><li style="list-style-type:disc">Therac-25 radiation therapy machine</li></ul><p id="892c1467-1fb1-421c-b853-68b62189620b" class="">
+</p><p id="6b76645c-8921-4115-bf6b-eded0e36105c" class=""><mark class="highlight-pink"><strong>Software Fault:</strong></mark><strong> </strong>A static defect in the software</p><p id="5e86182b-f77e-42db-ba9e-6992e00b475f" class=""><mark class="highlight-pink"><strong><strong><strong><strong><strong>Software Error:</strong></strong></strong></strong></strong></mark><strong><strong><strong><strong><strong> </strong></strong></strong></strong></strong>An incorrect internal state that is the manifestation of some fault</p><p id="07bc4b8b-830f-4fc2-8bf7-aedcf5582421" class=""><mark class="highlight-pink"><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Software Failure:</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></mark><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong> </strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>external, incorrect behavior with respect to the requirements or another description of the expected behaviour</p><h3 id="621b9280-1e92-423e-8395-2001241f6443" class="">RIPR <mark class="highlight-red">(important to study) </mark></h3><ul id="13aed704-35bf-421b-8308-8139dd8931bc" class="bulleted-list"><li style="list-style-type:disc">4 conditions needed for failure to be observed<ul id="01f8e035-bb8d-4659-9f96-cd322f82e4ad" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-teal"><strong>Reachability:</strong></mark> a test must reach the location in the program that contains the fault</li></ul><ul id="a6c41379-51c5-4604-bc11-d8f5bacdcd12" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-teal"><strong>Infection:</strong></mark> after the faulty location is executed, the state of the program must be incorrect</li></ul><ul id="b7be1ea4-ccd9-4590-933c-ace81bd1aeb0" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-teal"><strong>Propagation:</strong></mark> the infected state must propagate through the rest of the execution and cause some output or final state of the program to be incorrect.</li></ul><ul id="cdfcc01b-89d0-4bb0-abb1-e630b298ef4c" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-teal"><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Revealability:</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></mark><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong> </strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>the tester must observe part of the incorrect portion of the final program state</li></ul></li></ul><h3 id="553d7c51-b906-4c6f-bb91-19f8febd849b" class="">Control Flow Graph</h3><ul id="290814f3-a1b7-44ae-97d8-b2a490123cd3" class="bulleted-list"><li style="list-style-type:disc">for each statement, draw these statements first</li></ul><ul id="f598863d-bf90-41a3-bb17-ef9c9b99c66b" class="bulleted-list"><li style="list-style-type:disc">have nodes as objects</li></ul><ul id="8317fa07-c3c3-42f0-a2eb-b0669d6873e6" class="bulleted-list"><li style="list-style-type:disc">have operations as edges (links)</li></ul><ul id="77559ff6-f87c-4aaa-8a8a-dcdd6e3dfa3e" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red">node coverage doesn’t imply edge coverage, but edge coverage implies node coverage</mark></li></ul><h3 id="bba7ad11-bc5e-4d69-86e8-2dd256bd8066" class="">Logic Coverage</h3><ul id="186643c4-5ff9-4f14-8708-8be8c7316704" class="bulleted-list"><li style="list-style-type:disc">involves the boolean expressions of the code</li></ul><ul id="2f88a74d-a784-45c2-86a4-8fcc2bd0905c" class="bulleted-list"><li style="list-style-type:disc">coverage criteria:<ul id="e3bb3d96-4591-4348-bced-6e45c86f8b2b" class="bulleted-list"><li style="list-style-type:circle">predicate coverage<ul id="883011ce-ef08-4a70-a18a-faf04386bcb5" class="bulleted-list"><li style="list-style-type:square">the test set should make each predicate evaluate to true and false</li></ul><ul id="5d57d82d-efbb-443c-8eb7-32c9bd6cd41d" class="bulleted-list"><li style="list-style-type:square">ie. ((a&gt;b || c) &amp;&amp; (x&lt;y) = {True, False}</li></ul><ul id="fe11aa94-11b8-45a0-9bb0-b02a73a66636" class="bulleted-list"><li style="list-style-type:square">Consider: P = [(a&gt;b) || c] &amp;&amp; (x&lt;y)</li></ul><table id="06c0fc27-d743-4879-be43-afb6ecddd373" class="simple-table"><tbody><tr id="374d8c71-ee64-4c23-808a-b5d95d277360"><td id="Bxmt" class="" style="width:120px">Test Cases</td><td id="bura" class="" style="width:120px">a&gt;b</td><td id="sQ=c" class="" style="width:120px">c</td><td id="p_Jt" class="" style="width:120px">x&lt;y</td><td id=";qY;" class="" style="width:120px">P</td></tr><tr id="1bcdbaef-23b7-490b-a39b-144c432fc42c"><td id="Bxmt" class="" style="width:120px">T1: a=5, b=4, c = T, x=3, y=2</td><td id="bura" class="" style="width:120px">T</td><td id="sQ=c" class="" style="width:120px">T</td><td id="p_Jt" class="" style="width:120px">F</td><td id=";qY;" class="" style="width:120px">F</td></tr><tr id="14693bf4-3959-4f7e-94dd-8148cd670ca6"><td id="Bxmt" class="" style="width:120px">T2: a=5, b=4, c=F, x=2, y=3</td><td id="bura" class="" style="width:120px">T</td><td id="sQ=c" class="" style="width:120px">F</td><td id="p_Jt" class="" style="width:120px">T</td><td id=";qY;" class="" style="width:120px">T</td></tr></tbody></table><ul id="fa2b30e5-62f3-4d5e-b5aa-3c693146ee59" class="bulleted-list"><li style="list-style-type:square">if want 100% clause coverage, then need to satisfy every clause (T,F) so in our example above, clause coverage is not satisfied (only predicate coverage). This is because (a&gt;b) clause is only tested with T output.</li></ul><ul id="ebc015b0-1629-4410-bd2a-687d0c04ea64" class="bulleted-list"><li style="list-style-type:square"><mark class="highlight-red">NOTE: predicate coverage DOES NOT imply clause coverage, and clause coverage also DOES NOT imply predicate coverage.</mark></li></ul><ul id="19aa80a0-9209-482d-8385-b3967789a0bb" class="toggle"><li><details open=""><summary><mark class="highlight-yellow"><span style="border-bottom:0.05em solid"><strong>EXAM Q</strong></span></mark>: Does clause coverage imply predicate coverage? If not give counter example.</summary><p id="7bc3bde3-c03a-4bec-a4fd-29ba609764b2" class=""><mark class="highlight-blue">No, here is a counter example.</mark></p><table id="27214cf3-bff2-4251-a32d-f1a21e2edb66" class="simple-table"><tbody><tr id="55aff4a4-bc75-4181-9b40-80f150a70c0d"><td id="=&lt;m]" class=""></td><td id="b@dL" class="">a</td><td id="qEC{" class="">b</td><td id="Nks_" class="">P</td></tr><tr id="a81d62cb-4f28-405e-a739-e046ba8f311c"><td id="=&lt;m]" class="">T1</td><td id="b@dL" class="">T</td><td id="qEC{" class="">F</td><td id="Nks_" class="">F</td></tr><tr id="c6ae87dc-2f7b-44c0-903e-9402bf3edb05"><td id="=&lt;m]" class="">T2</td><td id="b@dL" class="">F</td><td id="qEC{" class="">T</td><td id="Nks_" class="">F</td></tr></tbody></table></details></li></ul></li></ul><ul id="fab4d06e-16b6-460c-a324-0d039e1a855a" class="bulleted-list"><li style="list-style-type:circle">clause coverage<ul id="ab6aeca0-537f-4cd0-a159-2a24dd9b25b8" class="bulleted-list"><li style="list-style-type:square">the test set should make each clause evaluate to true and false</li></ul><ul id="37eb04de-2f4b-494c-b4af-45dba66323ca" class="bulleted-list"><li style="list-style-type:square">ie. (a&gt;b) = {True, False}, c = {True, False}, (x&lt;y) = {True, False}</li></ul><ul id="32f98fff-e141-4099-9c98-d9ae38215ba3" class="bulleted-list"><li style="list-style-type:square">weakness: the values do not always make a difference</li></ul><p id="78bb233c-03e7-451a-9fdd-0d00a8e83a11" class="block-color-teal">QUESTION TO LOOK UP: find examples of cases where we should check active clause coverage additionally to clause coverage</p></li></ul><ul id="f6ab1c79-f912-4ec2-b7ed-c5692821f386" class="bulleted-list"><li style="list-style-type:circle">active clause coverage<ul id="047a1463-0812-4788-9589-73c75bdff4f3" class="bulleted-list"><li style="list-style-type:square">stronger version of clause coverage (more powerful, covers more cases)</li></ul><ul id="584f48d5-7626-47cd-a761-c30c232b96d9" class="bulleted-list"><li style="list-style-type:square">need to check whether there are two cases for each clause (true and determines the predicate &amp; is false and determines the predicate)</li></ul><ul id="18979c22-3b85-40d7-b611-9980a9b76cc6" class="bulleted-list"><li style="list-style-type:square">ie. T → T, F→F for each clause (ie. a→P)</li></ul><ul id="f0795356-a381-47a9-8a3d-ac2bced15450" class="bulleted-list"><li style="list-style-type:square">so overall, active clause coverage means that for each clause it should satisfy the properties of one clause (T) implies (P == T), and also vice versa.</li></ul></li></ul><ul id="b480f4d8-eef7-4ed7-af09-c033e2d2cee0" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-red">NOTE: </mark>active clause coverage implies clause coverage, <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>active clause coverage implies predicate coverage</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong> </li></ul><ul id="529b1013-fefb-4002-997b-fa2b2289c862" class="toggle"><li><details open=""><summary><mark class="highlight-red">(PROVE THIS)</mark></summary><p id="b1192064-b270-4cdf-b494-9ae770e083f6" class=""><mark class="highlight-orange"><span style="border-bottom:0.05em solid"><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Active Clause Coverage Implies Predicate Coverage</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></span></mark></p><p id="dea46c4a-aea1-4ade-9e28-d8067e3f9d9b" class=""><strong>Proof:</strong></p><ol type="1" id="c3e10cac-1dfd-453c-b980-25d1a21b87c0" class="numbered-list" start="1"><li>Let&#x27;s consider a single predicate P with n clauses: P = C1 AND C2 AND ... AND Cn.</li></ol><ol type="1" id="913dcd66-4622-414d-a502-980161a49456" class="numbered-list" start="2"><li>Assume we have achieved active clause coverage for this predicate P. This means that each clause Ci within the predicate P has been the cause of P evaluating to both true and false at least once.``</li></ol><ol type="1" id="a87b402a-1677-490c-a976-d150a003d0b8" class="numbered-list" start="3"><li>Since we have achieved active clause coverage, we know that each individual clause Ci has been evaluated to both true and false in different test cases.</li></ol><ol type="1" id="626a24ed-2e0d-4258-a334-ffd378dff75f" class="numbered-list" start="4"><li>Now, let&#x27;s analyze how the predicate P evaluates:<ul id="11fbeffc-3d82-4137-a734-699e030af5f6" class="bulleted-list"><li style="list-style-type:disc">If all clauses Ci in P are true, then P is true.</li></ul><ul id="b0ad9e8d-3a4f-43ab-9c84-17eaf99e9a06" class="bulleted-list"><li style="list-style-type:disc">If any one of the clauses Ci in P is false, then P is false.</li></ul></li></ol><ol type="1" id="07540e1e-dffa-4095-a3d3-f51ef5621759" class="numbered-list" start="5"><li>Since we have achieved active clause coverage, we have tested all combinations of the clauses Ci evaluating to true and false within the predicate P.</li></ol><ol type="1" id="48d2541f-e193-41e3-85f0-b86a0f4d1f13" class="numbered-list" start="6"><li>This implies that we have tested all possible combinations of truth values for the predicate P, including cases where P is true and cases where P is false.</li></ol><ol type="1" id="7cd723ad-9fd0-42ea-836f-4bbbc8eac884" class="numbered-list" start="7"><li>Therefore, by achieving active clause coverage for the predicate P, we have implicitly covered all possible combinations of truth values for the predicate P.</li></ol><ol type="1" id="51bbf5a2-cff9-4223-ba53-865790edf466" class="numbered-list" start="8"><li>Since this proof holds true for any predicate P in the program, by achieving active clause coverage for all predicates, we have effectively covered all possible combinations of truth values for all predicates.</li></ol><ol type="1" id="220e59f4-01b8-4d9f-b0d9-2f669d13bfb9" class="numbered-list" start="9"><li>This aligns with the definition of predicate coverage: covering all possible combinations of truth values for the predicates in the program.</li></ol><p id="1e71a897-3c29-4653-af37-273644c03fd3" class=""><mark class="highlight-orange"><span style="border-bottom:0.05em solid"><strong><span style="border-bottom:0.05em solid"><strong><span style="border-bottom:0.05em solid"><strong><span style="border-bottom:0.05em solid"><strong><span style="border-bottom:0.05em solid"><strong><span style="border-bottom:0.05em solid"><strong>Active Clause Coverage Implies Clause Coverage (</strong></span></strong></span></strong></span></strong></span></strong></span></strong></span></mark><mark class="highlight-red"><span style="border-bottom:0.05em solid"><strong><span style="border-bottom:0.05em solid"><strong><span style="border-bottom:0.05em solid"><strong><span style="border-bottom:0.05em solid"><strong><span style="border-bottom:0.05em solid"><strong><span style="border-bottom:0.05em solid"><strong>false</strong></span></strong></span></strong></span></strong></span></strong></span></strong></span></mark><mark class="highlight-orange"><span style="border-bottom:0.05em solid"><strong><span style="border-bottom:0.05em solid"><strong><span style="border-bottom:0.05em solid"><strong><span style="border-bottom:0.05em solid"><strong><span style="border-bottom:0.05em solid"><strong><span style="border-bottom:0.05em solid"><strong>)</strong></span></strong></span></strong></span></strong></span></strong></span></strong></span></mark></p><p id="218b2a2a-4c37-4834-9b6e-9ca9a1118077" class=""><mark class="highlight-red">Counterexample:</mark></p><p id="4c4f09a8-5186-46a3-af4e-b679b0847800" class="">Consider a predicate P with two clauses: P = C1 AND C2.</p><p id="672a25f5-387a-4a3c-863b-5752eb47cb0c" class="">For active clause coverage:</p><ul id="5d58f670-fe19-463e-927d-c19aea8f4ced" class="bulleted-list"><li style="list-style-type:disc">Test case 1: C1 = true, C2 = true (P evaluates to true)</li></ul><ul id="afd2596c-8530-478a-842b-1586c844ef08" class="bulleted-list"><li style="list-style-type:disc">Test case 2: C1 = false, C2 = false (P evaluates to false)</li></ul><p id="b07fc6a9-96ce-42b6-88e0-469bcfeee7e2" class="">Active clause coverage is achieved because both C1 and C2 have caused P to evaluate to both true and false.</p><p id="f8f7ef71-7f9a-4c6b-b975-eeb2122d55c5" class="">However, clause coverage is not achieved because we have not tested cases where each individual clause is evaluated to true and false separately:</p><ul id="41319ac9-6cb0-42f9-acc6-abda1fc7615e" class="bulleted-list"><li style="list-style-type:disc">We haven&#x27;t tested C1 in isolation with C2 = true (C1 = true, C2 = true).</li></ul><ul id="27fb0c8b-baec-4a43-9411-231ff3296a63" class="bulleted-list"><li style="list-style-type:disc">We haven&#x27;t tested C2 in isolation with C1 = true (C1 = true, C2 = true).</li></ul><p id="6a5e6990-d746-47be-8a17-8395a7f25184" class="">Therefore, in this example, active clause coverage does not imply clause coverage.</p><p id="90dad795-bb79-4056-bf1d-795bd223ae71" class="">
+</p></details></li></ul></li></ul><h3 id="70e4bfb6-4ebf-4ecc-86f0-180de8b82db3" class=""><mark class="highlight-purple">Test Oracles</mark></h3><ul id="1ddc3598-d73a-4170-bb59-fcbd4526732c" class="bulleted-list"><li style="list-style-type:disc">test oracle is an encoding of the expected results of a given test<ul id="92659f49-df11-488e-bb64-6dbbdfaa1e54" class="bulleted-list"><li style="list-style-type:circle">ie. JUnit assertion</li></ul></li></ul><ul id="7b51a480-ae91-42d6-be44-33715894075f" class="bulleted-list"><li style="list-style-type:disc">what should be checked:<ul id="fa5b6bff-28a7-4615-b5f9-0a121cc116ad" class="bulleted-list"><li style="list-style-type:circle">output state is everything that is produced by the software under test</li></ul><ul id="ddb3beb5-636d-48b0-93c5-90efacc15db0" class="bulleted-list"><li style="list-style-type:circle">each test should have a goal and testers should check the output(s) that are mainly related to that goal</li></ul></li></ul><ul id="62990c4f-9761-4c5c-bd71-df6a86d65b86" class="bulleted-list"><li style="list-style-type:disc">how to determine what the correct results are:</li></ul><ul id="b10eff70-b8bc-4e29-b96c-3ac4b8a5cd8f" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal"><strong>specification-based direct verification of outputs</strong></mark><ul id="8e2d7782-6cf6-46da-a3c5-06c4164bfb1d" class="bulleted-list"><li style="list-style-type:circle">produce a specific formula to test a method and match if output is correct or not</li></ul><ul id="5c26f6cc-b130-443b-be09-76f617e811d3" class="bulleted-list"><li style="list-style-type:circle">problem is that it is not scalable, need to write mathematical formula for each output which is very challenging and costly</li></ul></li></ul><ul id="7f2bb3ac-fa59-4f54-990e-500a810348c7" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal"><strong>redundant computations</strong></mark><ul id="2f0e3f5c-6a32-4ddf-a9c3-b69dfca8f138" class="bulleted-list"><li style="list-style-type:circle">idea is get a program (software) that sorts arrays and feed same array to your program and the other well known program and see if outputs match</li></ul><ul id="67e79f15-771f-4219-8dbc-1b2c8a046b1c" class="bulleted-list"><li style="list-style-type:circle">usually used for regression testing</li></ul></li></ul><ul id="cc591037-c9ff-44b1-94b0-530c4cdedee4" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal"><strong>consistency checks</strong></mark><ul id="3d3724af-66ae-487a-a7ac-a5812c36c219" class="bulleted-list"><li style="list-style-type:circle">think of it as a sanity check</li></ul><ul id="30de62b7-5879-4d27-901c-b5f300bdf8ae" class="bulleted-list"><li style="list-style-type:circle">check whether certain properties hold</li></ul></li></ul><h3 id="9b7fddd6-7d92-40f1-a08d-3cea5a78cc45" class="">Android Testing</h3><p id="4526b719-9f0a-456a-b25e-ecddd6eba5e9" class=""><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Model-View-Presenter (MVP)</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></p><ul id="f2ea97ad-5476-45a4-be78-7af15499faae" class="bulleted-list"><li style="list-style-type:disc">an architectural design pattern that results in code that is easier to test</li></ul><ul id="f3ec216b-5f10-4116-ad24-dfa61960991f" class="bulleted-list"><li style="list-style-type:disc">consists of 3 components:<ol type="1" id="d54c028e-144e-433f-bef2-3161d7e9a9c2" class="numbered-list" start="1"><li>Model (Data)</li></ol><ol type="1" id="e35e4c12-5c21-4806-bd87-a341b954cd29" class="numbered-list" start="2"><li>View (UI)</li></ol><ol type="1" id="cbcbae6b-c757-40c2-972c-2eaa3a895076" class="numbered-list" start="3"><li>Presenter (Business Logic)</li></ol></li></ul><p id="d050bed8-f75b-4ad4-bd5a-fb2cf24f377d" class=""><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Local and Instrumented Tests</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></p><ul id="dcca7a67-ab77-40d7-b912-a39ac21d941c" class="bulleted-list"><li style="list-style-type:disc">local unit tests<ul id="a2a56b66-b2b0-4b42-a82c-99a5ba0995b5" class="bulleted-list"><li style="list-style-type:circle">runs on the machine’s local JVM</li></ul><ul id="437ae32e-1bf0-4f58-8e7c-9fe93a207fb7" class="bulleted-list"><li style="list-style-type:circle">suggested around 70% unit tests</li></ul></li></ul><ul id="b181f64b-5de6-4fb2-8a79-3a6e13279f95" class="bulleted-list"><li style="list-style-type:disc">instrumented tests<ul id="8601b1a2-ba9e-4d1a-9b2e-2cf34df0df6a" class="bulleted-list"><li style="list-style-type:circle">runs on the emulator or users actual device</li></ul><ul id="87870dbd-5b9c-4617-af14-8ad53b0724ce" class="bulleted-list"><li style="list-style-type:circle">often used for integrated testing or user interface testing</li></ul><ul id="e79f2b93-487f-4279-83fc-dbce736ebc3e" class="bulleted-list"><li style="list-style-type:circle">suggested around 20% integration test</li></ul><ul id="362ca577-29e5-498c-b314-8f486f2883c2" class="bulleted-list"><li style="list-style-type:circle">suggested around 10% UI test</li></ul></li></ul><p id="faa63e0c-471b-41a7-a6e4-438cde142bfc" class=""><strong><strong><strong><strong><strong>Commonly used tools</strong></strong></strong></strong></strong></p><ul id="85a4588e-c4c2-4715-94b5-e03d61a91494" class="bulleted-list"><li style="list-style-type:disc">JUnit<ul id="1b989333-db9e-4ada-a5a6-a218c660237c" class="bulleted-list"><li style="list-style-type:circle">for unit tests in Java</li></ul></li></ul><ul id="9daf8e99-512b-482a-9a1b-4841f21955de" class="bulleted-list"><li style="list-style-type:disc">Mockito<ul id="2e8c9864-ec6f-486f-a7c5-c25f420024fc" class="bulleted-list"><li style="list-style-type:circle">used for creating mock objects to facilitate testing a component in isolation</li></ul></li></ul><ul id="7cf9ae75-1ae9-41ee-a680-9a61b410ff21" class="bulleted-list"><li style="list-style-type:disc">Espresso<ul id="9004953a-cdd3-491a-94ee-a045df3fc9de" class="bulleted-list"><li style="list-style-type:circle">used for writing UI tests</li></ul></li></ul><p id="83f51cae-adb5-4928-8ad1-45881655cdad" class=""><strong><strong><strong><strong><strong>Mock Objects</strong></strong></strong></strong></strong></p><ul id="73d88120-f0ec-4f6c-b1a1-badb40ac2abd" class="bulleted-list"><li style="list-style-type:disc">software component that is used to replace the “real” component during testing</li></ul><ul id="13b02c20-3766-4385-8473-e4cc146206e8" class="bulleted-list"><li style="list-style-type:disc">used for:<ul id="a54dc3a8-d1a1-484d-9eee-430d0a68cf6f" class="bulleted-list"><li style="list-style-type:circle">represent components that have not yet been implemented</li></ul><ul id="8c85d79b-ee64-41ea-a89f-512ed0ab96ac" class="bulleted-list"><li style="list-style-type:circle">speed up testing</li></ul><ul id="d8d9159c-11fc-49bb-ba82-beaaf0d85143" class="bulleted-list"><li style="list-style-type:circle">reduce the cost</li></ul><ul id="fd239dcb-1ab9-4f37-97e8-58562f75cd48" class="bulleted-list"><li style="list-style-type:circle">avoid unrecoverable actions</li></ul></li></ul><h3 id="e243972a-e8cd-428b-bed0-66bda969f025" class="">Mockito</h3><ul id="ca3aea4e-a4ab-4192-8b94-f9171a9baef1" class="bulleted-list"><li style="list-style-type:disc">mocking framework for Java</li></ul><ul id="062862b3-8452-4358-b8ef-00265094375c" class="bulleted-list"><li style="list-style-type:disc">features include:<ul id="bcac19af-72d0-4f55-81c1-93c727c55f75" class="bulleted-list"><li style="list-style-type:circle"><strong>creating mocks:</strong> allows for creating mock objects and configure them</li></ul><ul id="c35fcc83-814a-4167-a2a1-d7b7f7a10a5f" class="bulleted-list"><li style="list-style-type:circle"><strong>stubbing:</strong> process of specifying what to do if a specific method of the mock object is called</li></ul><ul id="d5f8f1d3-35dd-4c6a-b22d-0e35cb7008bb" class="bulleted-list"><li style="list-style-type:circle"><strong>verifying behavior:</strong> check whether certain method has been invoked, etc.</li></ul></li></ul><ul id="9ffb5c03-2bea-4140-a3ce-a9f0f5c1d74f" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong><strong><strong><strong><strong>Stubbing in Mockito</strong></strong></strong></strong></strong></mark><ul id="b5661d90-594c-4502-a7c5-11b82be2926a" class="bulleted-list"><li style="list-style-type:circle">A stub is a fake class that comes with preprogrammed return values. It’s injected into the class under test to give you absolute control over what’s being tested as input. A typical stub is a database connection that allows you to mimic any scenario without having a real database.</li></ul></li></ul><ul id="30c4f3f4-07b0-44fa-a852-9d58c1b3605d" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red"><strong><mark class="highlight-red"><strong><mark class="highlight-red"><strong><mark class="highlight-red"><strong><mark class="highlight-red"><strong><mark class="highlight-red"><strong><mark class="highlight-red"><strong><mark class="highlight-red"><strong><mark class="highlight-red"><strong><mark class="highlight-red"><strong><mark class="highlight-red"><strong><mark class="highlight-red"><strong><mark class="highlight-red"><strong><mark class="highlight-red"><strong><mark class="highlight-red"><strong><mark class="highlight-red"><strong><mark class="highlight-red"><strong><mark class="highlight-red"><strong>Mocking in Mockito</strong></mark></strong></mark></strong></mark></strong></mark></strong></mark></strong></mark></strong></mark></strong></mark></strong></mark></strong></mark></strong></mark></strong></mark></strong></mark></strong></mark></strong></mark></strong></mark></strong></mark></strong></mark><ul id="d4a83927-85d4-4718-94a5-1e5ef1cec8b3" class="bulleted-list"><li style="list-style-type:circle">mocking is the act of removing external dependencies from a unit test in order to create a controlled environment around it.</li></ul><ul id="2488d5ae-c868-4399-ac56-c14f49e38316" class="bulleted-list"><li style="list-style-type:circle">A mock is a fake class that can be examined after the test is finished for its interactions with the class under test. For example, you can ask it whether a method was called or how many times it was called. Typical mocks are classes with side effects that need to be examined, e.g. a class that sends emails or sends data to another external service.</li></ul></li></ul><ul id="fd54beb6-367a-4ff0-980d-b25ca2b5c2dc" class="toggle"><li><details open=""><summary><mark class="highlight-yellow">Why is the naive solution of pre-filling a realtime database with “customers” and running a test against it problematic?</mark></summary><ul id="f53d2941-9c8a-40fc-812a-6f3f8f9892d3" class="bulleted-list"><li style="list-style-type:disc">creates a hard dependency on a running database, and also requires an extra step to create the test data.</li></ul><ul id="d05cdfd7-7455-4f9b-8575-5a4a34d141ab" class="bulleted-list"><li style="list-style-type:disc">not practical in real world</li></ul></details></li></ul><ul id="93e71219-3f65-4f02-97d5-b7340d5f9cae" class="toggle"><li><details open=""><summary><mark class="highlight-yellow"><mark class="highlight-yellow"><mark class="highlight-yellow"><mark class="highlight-yellow"><mark class="highlight-yellow"><mark class="highlight-yellow"><mark class="highlight-yellow"><mark class="highlight-yellow"><mark class="highlight-yellow"><mark class="highlight-yellow"><mark class="highlight-yellow"><mark class="highlight-yellow"><mark class="highlight-yellow">What is the best solution to this?</mark></mark></mark></mark></mark></mark></mark></mark></mark></mark></mark></mark></mark></summary><p id="235d5a4d-2901-4d7f-8261-a88379b00f08" class="">The best solution for a true unit test is to completely remove the database dependency. We will stub the database connection instead, and “fool” our class to think that it is talking to a real “Manager”, while in reality, the “Manager” is a Mockito stub.</p></details></li></ul><p id="76afda52-26c2-4404-bd38-abf06025e565" class=""><a href="https://semaphoreci.com/community/tutorials/stubbing-and-mocking-with-mockito-2-and-junit#:~:text=A%20stub%20is%20a%20fake,without%20having%20a%20real%20database">https://semaphoreci.com/community/tutorials/stubbing-and-mocking-with-mockito-2-and-junit#:~:text=A stub is a fake,without having a real database</a>.</p><ul id="c166027f-f59b-4dde-b8f2-8f576c727a38" class="bulleted-list"><li style="list-style-type:disc">Example JUnit test case using Mockito in Java. Consider a simple ‘Calculator’ class with ‘add’ method.</li></ul><pre id="82c1e7f8-c97d-410a-8f99-8532089b8beb" class="code"><code>// Calculator.java
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+}
+
+// CalculatorTest.java
+import org.junit.Test;
+import static org.mockito.Mockito.*;
+
+public class CalculatorTest {
+
+    @Test
+    public void testAddition() {
+        // Create a mock instance of Calculator
+        Calculator calculatorMock = mock(Calculator.class);
+
+        // Define the behavior of the mock
+        when(calculatorMock.add(2, 3)).thenReturn(5);
+
+        // Perform the actual test
+        int result = calculatorMock.add(2, 3);
+
+        // Verify the behavior
+        verify(calculatorMock).add(2, 3);
+
+        // Assert the result
+        assertEquals(5, result);
+    }
+}</code></pre></div></article></body></html>
