@@ -1,3 +1,6 @@
-# Notes of UofT
-
-This is a compilation of notes taken for UofT (mostly UTSC) courses.
+<h1 align="center">UofT Notes &nbsp; <img src="https://media.giphy.com/media/dQpUkK59l5Imxsh8jN/giphy.gif" width="50" height="50" /></h1>
+<p align="center">This is a compilation of notes I took when taking UofT CMS+ courses. Feel free to use them at your discretionary for studying purposes.</p>
+<h3 align="center"><b>If there are any missing notes from a course you wish to access, please contact me via <a href="https://www.instagram.com/chris.yan_/">Instagram</a> or <a href="https://www.linkedin.com/in/chris-yan-97820a228/">LinkedIn</a> and I will try my best to accomodate your request (granted I may not have taken such course prior).</b></h3>
+<br>
+<a href="https://www.utoronto.ca/"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Utoronto_coa.svg/1200px-Utoronto_coa.svg.png" width="400" height="400" alt="UofT" /></a>
+<p><sub>Disclaimer: This project was done within regulations of UofT's academic code of conduct and only serves with the purpose of providing student's with the ability of having access to notes they might not have been able to take themselves, some extra exam practice material, and also a free way of sparking interest in a future course in which they might want to take. In no way do these notes display any material that violates academic regulations with regards to cheating in exams, tests, quizzes, or graded assignments. The notes were taken personally by me during lectures and also compiled as my studying guides for exams. It serves to help students solely in the way of studying, and not produce any direct answers to graded work that may cause academic offenses.</sub></p>
